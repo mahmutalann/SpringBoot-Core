@@ -1,15 +1,13 @@
 package com.example.springcorelearn;
-import org.springframework.stereotype.Component;
 
-@Component
-public class CricketCoach implements Coach{
+public class SwimCoach implements Coach {
 	
-	public CricketCoach() {
+	public SwimCoach() {
 		System.out.println("Instructor : " + getClass().getSimpleName());
 	}
 	
 	@Override
 	public String getDailyWorkout() {
-		return "Run 1K meters";
+		return "Swim 15 minutes everyday!";
 	}
 }

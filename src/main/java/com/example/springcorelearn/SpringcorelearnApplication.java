@@ -6,7 +6,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication(
 		scanBasePackages = {
 				"com.example.springcorelearn",
-				"tennis"
+				"tennis",
+				"config"
 				}
 		)
 
