@@ -12,25 +12,14 @@ public class DemoController {
 	
 	private Coach myCoach;
 	
-	private Coach anotherCoach;
-	
 	@Autowired
-	public DemoController(
-			@Qualifier("cricketCoach")Coach theCoach,
-			@Qualifier("cricketCoach") Coach theAnotherCoach) {
+	public DemoController(@Qualifier("cricketCoach")Coach theCoach) {
 		System.out.println("Instructor : " + getClass().getSimpleName());
 		myCoach = theCoach;
-		anotherCoach = theAnotherCoach;
 	}
 	
 	@GetMapping("/dailyworkout")
 	public String getDailyWorkoutString() {
 		return myCoach.getDailyWorkout();
-	}
-	
-	@GetMapping("/check")
-	public String check() {
-		return "Comparing beans: myCoach == anotherCoach, " + (myCoach == anotherCoach);
-		//if this structure is singleton scope thats return true, if this structure is prototype scope thats return false.
 	}
 }
